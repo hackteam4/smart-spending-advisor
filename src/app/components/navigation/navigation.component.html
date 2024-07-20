@@ -4,7 +4,7 @@
       <img src="assets/Investec.png" alt="Investec Logo">
     </div>
     <div class="navbar-end w-1/4">
-      <form [formGroup]="accountForm" class="flex flex-column justify-end items-center w-full gap-4 pr-2">
+      <form [formGroup]="accountForm" class="flex flex-row justify-end items-center w-full gap-4 pr-2">
         <input id="accountNumber" type="text" [formControl]="accountForm.controls.accountNumber" placeholder="Account number" class="bg-[#F3F4F6] w-4/5 rounded-lg h-8 text-[#6E7480] pl-2 hover:pointer-cursor">
         <button class="rounded-lg h-8 px-2 bg-[#374151] text-white" type="submit" (click)="submit()">Submit</button>
       </form>

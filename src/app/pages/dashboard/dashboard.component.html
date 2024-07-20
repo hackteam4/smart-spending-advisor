@@ -1,11 +1,15 @@
-<div class="flex gap-10 items-start w-full mt-5 justify-evenly px-10">
-  <app-intro-card />
-  <div class="h-[30rem] flex shadow-xl rounded-3xl bg-white pt-4 pr-10">
-    <div class="flex flex-col h-[20rem] w-[320px]">
-      <app-pie-chart class="h-56" />
-      <app-past-chart class="h-56" />
+<div class="flex flex-col justify-start gap-10 h-lvh">
+  <div class="flex gap-10 items-start w-full mt-5 justify-evenly px-10">
+    <app-intro-card />
+    <div class="h-[30rem] flex shadow-xl rounded-3xl bg-white pt-4 pr-10">
+      <div class="flex flex-col h-[20rem] w-[320px]">
+        <app-pie-chart class="h-56" />
+        <app-past-chart class="h-56" />
+      </div>
+      <app-bar-chart class="h-[20rem] self-center" />
     </div>
-    <app-bar-chart class="h-[20rem] self-center" />
   </div>
+  <app-predictions class="w-full" />
 </div>
+
 <app-footer />
