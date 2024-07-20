@@ -60,15 +60,14 @@ export interface ClassifiedTransactions {
     [ClassificationsLevel2.Income_Rent]: AIClassifiedTransaction[];
     [ClassificationsLevel2.Income_Other]: AIClassifiedTransaction[];
   };
-    [ClassificationsLevel1.Expense]: {
-        [ClassificationsLevel2.Expense_Household]: {
-            [ClassificationsLevel3.Expense_Household_Rent]: AIClassifiedTransaction[];
-            [ClassificationsLevel3.Expense_Household_Utilities]: AIClassifiedTransaction[];
-            [ClassificationsLevel3.Expense_Household_Repairs_and_Maintenance]: AIClassifiedTransaction[];
-        };
-        [ClassificationsLevel2.Expense_Personal]: {};
-        [ClassificationsLevel3.Expense_Personal_Grooming]: AIClassifiedTransaction[];
-        [ClassificationsLevel3.Expense_Personal_Groceries]: AIClassifiedTransaction[];
+  [ClassificationsLevel1.Expense]: {
+    [ClassificationsLevel2.Expense_Household]: {
+      [ClassificationsLevel3.Expense_Household_Rent]: AIClassifiedTransaction[];
+      [ClassificationsLevel3.Expense_Household_Utilities]: AIClassifiedTransaction[];
+      [ClassificationsLevel3.Expense_Household_Repairs_and_Maintenance]: AIClassifiedTransaction[];
     };
+    [ClassificationsLevel2.Expense_Personal]: {};
+    [ClassificationsLevel3.Expense_Personal_Grooming]: AIClassifiedTransaction[];
+    [ClassificationsLevel3.Expense_Personal_Groceries]: AIClassifiedTransaction[];
   };
-};
+}
