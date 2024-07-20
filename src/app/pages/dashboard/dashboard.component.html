@@ -1,7 +1,22 @@
+<div class="flex flex-col justify-start gap-10 h-lvh">
+  <div class="flex gap-10 items-start w-full mt-5 justify-evenly px-10">
+    <app-intro-card />
+    <div class="h-[30rem] flex shadow-xl rounded-3xl bg-white pt-4 pr-10">
+      <div class="flex flex-col h-[20rem] w-[320px]">
+        <app-pie-chart class="h-56" />
+        <app-past-chart class="h-56" />
+      </div>
+      <app-bar-chart class="h-[20rem] self-center" />
+    </div>
+  </div>
+  <app-predictions class="w-full" />
+</div>
+
+<app-footer />
 <h1>Dashboard</h1>
 <a routerLink="profile">Go to Profile</a>
 
-<div class="goal">
+<!-- <div class="goal">
   <div>
     <strong>Your goals</strong>
   </div>
@@ -17,4 +32,4 @@
     <div class="goal-title">Days to M3:</div>
     <div>424</div>
   </div>
-</div>
+</div> -->
