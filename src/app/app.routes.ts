@@ -6,19 +6,13 @@ import {NavigationComponent} from "./components/navigation/navigation.component"
 export const routes: Routes = [
   {
     path: '',
-    component: NavigationComponent,
-    children: [
-      {
-        path: '',
-        component: DashboardComponent
-      },
-      { path: 'profile',
-        component: ProfileComponent
-      },
-    ],
+    component: DashboardComponent
+  },
+  { path: 'profile',
+    component: ProfileComponent
   },
   { path: '**',
-    redirectTo: 'dashboard',
+    redirectTo: '',
     pathMatch: 'full'
   }
 ];
