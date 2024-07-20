@@ -1,10 +1,10 @@
 export interface RequestList {
-  transactions: Request[];
+  transactions: IRequest[];
 }
 
-export interface Request {
+export interface IRequest {
   description: string;
-  transactionDate: Date;
+  transactionDate: string;
   amount: number;
   balance: number;
 }
