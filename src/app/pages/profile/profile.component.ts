@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { NavigationComponent } from '../../components/navigation/navigation.component';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [],
+  imports: [NavigationComponent],
   templateUrl: './profile.component.html',
-  styleUrl: './profile.component.scss'
+  styleUrl: './profile.component.scss',
 })
-export class ProfileComponent {
-
-}
+export class ProfileComponent {}
