@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-profile',
   standalone: true,
   imports: [],
   templateUrl: './profile.component.html',
-  styleUrl: './profile.component.scss'
+  styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {
   profileForm = new FormGroup({
