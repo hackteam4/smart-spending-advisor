@@ -1,3 +1,8 @@
+import {
+  FEClassificationsLevel1,
+  FEClassificationsLevel2,
+} from './classifications.enum';
+
 export interface Advisor {}
 
 export interface PieChart {
@@ -12,25 +17,30 @@ export interface AIClassifiedTransaction {
   date: Date;
   detail1: string; // Orgianl detail from statement
   detail2: string; // If needed
-  classfication: AIClassfication;
+  classfication: TransactionItem;
   amount: number; // Neg is outflow, pos is inflow
 }
 
-export enum AIClassfication {}
+export enum AIClassfication {
+  Salary,
+  Rent_Income,
+  Groceries,
+  Takeout,
+}
 // To be completed
 
 // ******************************************************
 // For FE
 // ******************************************************
 
-export enum FEClassificationsLevel1 {
-  Income,
-  Expense,
-  Asset,
-  Liabilties,
+export enum TransactionGroup {
+  Income = 'Income',
+  Expense = 'Expense',
+  Asset = 'Asset',
+  Liabilties = 'Liabilties',
 }
 
-export enum FEClassificationsLevel2 {
+export enum TransactionClass {
   Income_Salary,
   Income_Rent,
   Income_Other,
@@ -42,7 +52,7 @@ export enum FEClassificationsLevel2 {
   Liabilties_AssetFinance,
 }
 
-export enum FEClassificationsLevel3 {
+export enum TransactionItems {
   Expense_Household_Rent,
   Expense_Household_Utilities,
   Expense_Household_Repairs_and_Maintenance,
@@ -55,19 +65,48 @@ export enum FEClassificationsLevel3 {
 }
 
 export interface ClassifiedTransactions {
-  [ClassificationsLevel1.Income]: {
-    [ClassificationsLevel2.Income_Salary]: AIClassifiedTransaction[];
-    [ClassificationsLevel2.Income_Rent]: AIClassifiedTransaction[];
-    [ClassificationsLevel2.Income_Other]: AIClassifiedTransaction[];
+  [TransactionGroup.Income]: {
+    [TransactionClass.Income_Salary]: AIClassifiedTransaction[];
+    [TransactionClass.Income_Rent]: AIClassifiedTransaction[];
+    [TransactionClass.Income_Other]: AIClassifiedTransaction[];
   };
-  [ClassificationsLevel1.Expense]: {
-    [ClassificationsLevel2.Expense_Household]: {
-      [ClassificationsLevel3.Expense_Household_Rent]: AIClassifiedTransaction[];
-      [ClassificationsLevel3.Expense_Household_Utilities]: AIClassifiedTransaction[];
-      [ClassificationsLevel3.Expense_Household_Repairs_and_Maintenance]: AIClassifiedTransaction[];
+  [TransactionGroup.Expense]: {
+    [TransactionClass.Expense_Household]: {
+      [TransactionItem.Expense_Household_Rent]: AIClassifiedTransaction[];
+      [TransactionItem.Expense_Household_Utilities]: AIClassifiedTransaction[];
+      [TransactionItem.Expense_Household_Repairs_and_Maintenance]: AIClassifiedTransaction[];
     };
-    [ClassificationsLevel2.Expense_Personal]: {};
-    [ClassificationsLevel3.Expense_Personal_Grooming]: AIClassifiedTransaction[];
-    [ClassificationsLevel3.Expense_Personal_Groceries]: AIClassifiedTransaction[];
+    [TransactionClass.Expense_Personal]: {};
+    [TransactionItem.Expense_Personal_Grooming]: AIClassifiedTransaction[];
+    [TransactionItem.Expense_Personal_Groceries]: AIClassifiedTransaction[];
   };
 }
+
+export interface ClassificationsLayers {
+  level1: FEClassificationsLevel1;
+  level2?: FEClassificationsLevel2;
+  level3?: TransactionItem;
+}
+
+export interface ClassificationsMap {
+  [key: AIClassfication]: ClassificationsLayers;
+}
+
+export const AI_to_FE_ClassificationsMap: ClassificationsMap = {
+  [AIClassfication.Salary]: {
+    level1: FEClassificationsLevel1.Income,
+    level2: FEClassificationsLevel2.Income_Salary,
+  },
+  [AIClassfication.Rent_Income]: {
+    level1: FEClassificationsLevel1.Income,
+    level2: FEClassificationsLevel2.Income_Rent,
+  },
+  [AIClassfication.Groceries]: {
+    level1: FEClassificationsLevel1.Expense,
+    level2: FEClassificationsLevel2.Expense_Personal,
+  },
+  [AIClassfication.Takeout]: {
+    level1: FEClassificationsLevel1.Expense,
+    level2: FEClassificationsLevel2.Expense_Personal,
+  },
+};
