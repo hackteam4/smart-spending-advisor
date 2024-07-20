@@ -10,7 +10,7 @@ import Chart from 'chart.js/auto';
 })
 export class PieChartComponent implements OnInit {
   chart?: any;
-  @Input() data?: Number[] = [300, 50, 100];
+  @Input() data?: Number[] = [300, 70, 200];
   @Input() title?: string = 'Performance';
 
   ngOnInit() {
