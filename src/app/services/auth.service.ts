@@ -34,16 +34,11 @@ export class AuthService {
         .set('Authorization', `Basic ${btoa(env)}`),
     };
 
-    this.httpClient
+    return this.httpClient
       .post(
         'https://coral-app-sat5a.ondigitalocean.app/identity/v2/oauth2/token',
         body.toString(),
         options
       )
-      .pipe(takeUntilDestroyed())
-      .subscribe((res: any) => {
-        environment.BEARER_TOKEN = res.access_token;
-        this.accServ.getTransactions('4675778129910189600000003');
-      });
   }
 }

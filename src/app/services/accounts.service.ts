@@ -14,7 +14,7 @@ export class AccountsService {
   constructor(private httpClient: HttpClient) {}
 
   getTransactions(accountNumber: string) {
-    this.httpClient
+    return this.httpClient
       .get(
         `https://coral-app-sat5a.ondigitalocean.app/za/pb/v1/accounts/${accountNumber}/transactions?fromDate=2020-11-01`,
         {
