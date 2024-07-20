@@ -1,6 +1,12 @@
-<div class="grid grid-cols-2 gap-10 h-screen">
-  <app-pie-chart class="h-96" />
-  <app-past-chart class="h-96" />
-  <app-bar-chart class="col-span-2 h-96" />
+<div class="h-lvh flex flex-col gap-10 items-center w-full mt-5">
+  <div class="flex items-center px-10 gap-12 justify-evenly w-[90%]">
+    <app-intro-card />
+  </div>
+  <div class="w-[75%] h-[45%] flex shadow-xl rounded-3xl bg-white">
+    <div class="flex flex-col h-[20rem] w-[320px]">
+      <app-pie-chart class="h-56" />
+      <app-past-chart class="h-56" />
+    </div>
+    <app-bar-chart class="h-[20rem]" />
+  </div>
 </div>
-<app-intro-card />
