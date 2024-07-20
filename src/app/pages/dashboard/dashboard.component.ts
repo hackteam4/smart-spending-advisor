@@ -6,6 +6,7 @@ import { NavigationComponent } from '../../components/navigation/navigation.comp
 import { PastChartComponent } from '../../components/past-chart/past-chart.component';
 import { PieChartComponent } from '../../components/pie-chart/pie-chart.component';
 import { PredictionsComponent } from '../../components/predictions/predictions.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,6 +19,7 @@ import { PredictionsComponent } from '../../components/predictions/predictions.c
     PastChartComponent,
     IntroCardComponent,
     PredictionsComponent,
+    FooterComponent,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',

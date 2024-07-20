@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "investec-blue": "#374151",
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
