@@ -1,0 +1,16 @@
+.goal {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .goal-line {
+        display: flex;
+        flex-direction: row;
+
+        .goal-title {
+            width: 300px;
+        }
+    }
+}
