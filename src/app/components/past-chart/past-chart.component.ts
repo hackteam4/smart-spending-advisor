@@ -11,7 +11,7 @@ import { Chart } from 'chart.js';
 export class PastChartComponent implements OnInit {
   chart?: any;
   @Input() data?: Number[] = [300, 50, 100];
-  @Input() title?: string = 'Past';
+  @Input() title?: string = 'Position';
 
   ngOnInit() {
     this.createchart();
