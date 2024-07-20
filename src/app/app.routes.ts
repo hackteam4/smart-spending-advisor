@@ -1,18 +1,30 @@
 import { Routes } from '@angular/router';
-import {DashboardComponent} from "./pages/dashboard/dashboard.component";
-import {ProfileComponent} from "./pages/profile/profile.component";
-import {NavigationComponent} from "./components/navigation/navigation.component";
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 export const routes: Routes = [
   {
+    path: 'home',
+    component: NavigationComponent,
+    children: [
+      {
+        path: '',
+        component: DashboardComponent,
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent,
+      },
+    ],
+  },
+  {
     path: '',
-    component: DashboardComponent
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
-  { path: 'profile',
-    component: ProfileComponent
+  {
+    path: '**',
+    redirectTo: 'home',
   },
-  { path: '**',
-    redirectTo: '',
-    pathMatch: 'full'
-  }
 ];
