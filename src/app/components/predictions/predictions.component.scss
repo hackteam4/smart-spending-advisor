@@ -1,0 +1,50 @@
+.icon {
+    cursor: pointer;
+}
+
+.icon:hover {
+    background-color: gold;
+}
+
+.sheth {
+    opacity: 30%;
+    background-color: black;
+    z-index: 2;
+}
+
+.tip-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+
+    .tip-card {
+        height: auto;
+        padding: 10px 30px;
+        padding-bottom: 20px;
+        width: 600px;
+        background-color: black;
+        color: white;
+        opacity: 1;
+
+
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px,
+            rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px,
+            rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: underline;
+        }
+    }
+}
