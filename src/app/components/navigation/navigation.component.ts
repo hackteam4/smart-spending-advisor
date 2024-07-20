@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
-import {RouterOutlet} from "@angular/router";
+import { DashboardComponent } from '../../pages/dashboard/dashboard.component';
+import { ProfileComponent } from '../../pages/profile/profile.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [
-    RouterOutlet
-  ],
+  imports: [DashboardComponent, ProfileComponent, RouterOutlet],
   templateUrl: './navigation.component.html',
-  styleUrl: './navigation.component.scss'
+  styleUrl: './navigation.component.scss',
 })
-export class NavigationComponent {
-
-}
+export class NavigationComponent {}
