@@ -4,7 +4,7 @@ import { NavigationComponent } from '../../components/navigation/navigation.comp
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [NavigationComponent],
+  imports: [],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
 })
