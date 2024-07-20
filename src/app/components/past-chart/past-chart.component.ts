@@ -1,24 +1,24 @@
 import { Component, Input, OnInit } from '@angular/core';
-import Chart from 'chart.js/auto';
+import { Chart } from 'chart.js';
 
 @Component({
-  selector: 'app-pie-chart',
+  selector: 'app-past-chart',
   standalone: true,
   imports: [],
-  templateUrl: './pie-chart.component.html',
-  styleUrl: './pie-chart.component.scss',
+  templateUrl: './past-chart.component.html',
+  styleUrl: './past-chart.component.scss',
 })
-export class PieChartComponent implements OnInit {
+export class PastChartComponent implements OnInit {
   chart?: any;
   @Input() data?: Number[] = [300, 50, 100];
-  @Input() title?: string = 'Performance';
+  @Input() title?: string = 'Past';
 
   ngOnInit() {
     this.createchart();
   }
 
   createchart() {
-    this.chart = new Chart('PieChart', {
+    this.chart = new Chart('PastChart', {
       type: 'doughnut', //this denotes tha type of chart
       data: {
         // values on X-Axis
@@ -66,10 +66,6 @@ export class PieChartComponent implements OnInit {
           },
           legend: {
             display: true,
-            position: 'bottom',
-            labels: {
-              color: 'rgb(255, 99, 132)',
-            },
           },
           title: {
             display: true,
