@@ -1,0 +1,32 @@
+{
+  "transactions": [
+    {
+      "accountId": "4675778129910189600000003",
+      "type": "DEBIT",
+      "transactionType": "CardPurchases",
+      "status": "POSTED",
+      "description": "HTTP:\/\/WWW.UBEREATS.CO PARKTOWN NOR ZA",
+      "cardNumber": "402167xxxxxx9999",
+      "postedOrder": "1",
+      "postingDate": "2023-01-22",
+      "valueDate": "2022-05-15",
+      "actionDate": "2022-04-24",
+      "transactionDate": "2022-04-21",
+      "amount": "40.99"
+    },
+    {
+      "accountId": "4675778129910189600000003",
+      "type": "DEBIT",
+      "transactionType": "CardPurchases",
+      "status": "POSTED",
+      "description": "MUSICA ZA",
+      "cardNumber": "402167xxxxxx9999",
+      "postedOrder": "1",
+      "postingDate": "2023-01-22",
+      "valueDate": "2022-05-15",
+      "actionDate": "2022-04-24",
+      "transactionDate": "2022-04-21",
+      "amount": "41.99"
+    }
+  ]
+}

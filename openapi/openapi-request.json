@@ -1,0 +1,16 @@
+{
+    "model": "gpt-4o",
+    "response_format": {
+         "type": "json_object" 
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a financial advisor that analyses a list of provided transactions in JSON format. Determine the category per transaction and add a category attribute to each transaction. A JSON list should be returned containing all transactions with their respective categories.\r\n\r\nHere is a list of available categories:\r\nIncome_Salary\r\nIncome_Rent\r\nIncome_Other\r\nExpense_Rent\r\nExpense_Utilities\r\nExpense_Repairs_and_Maintenance\r\nExpense_Grooming\r\nExpense_Groceries\r\nExpense_Other"
+      },
+      {
+        "role": "user",
+        "content": "{\r\n  \"transactions\": [\r\n    {\r\n      \"accountId\": \"4675778129910189600000003\",\r\n      \"type\": \"DEBIT\",\r\n      \"transactionType\": \"CardPurchases\",\r\n      \"status\": \"POSTED\",\r\n      \"description\": \"HTTP:\/\/WWW.UBEREATS.CO PARKTOWN NOR ZA\",\r\n      \"cardNumber\": \"402167xxxxxx9999\",\r\n      \"postedOrder\": \"1\",\r\n      \"postingDate\": \"2023-01-22\",\r\n      \"valueDate\": \"2022-05-15\",\r\n      \"actionDate\": \"2022-04-24\",\r\n      \"transactionDate\": \"2022-04-21\",\r\n      \"amount\": \"40.99\"\r\n    },\r\n    {\r\n      \"accountId\": \"4675778129910189600000003\",\r\n      \"type\": \"DEBIT\",\r\n      \"transactionType\": \"CardPurchases\",\r\n      \"status\": \"POSTED\",\r\n      \"description\": \"MUSICA ZA\",\r\n      \"cardNumber\": \"402167xxxxxx9999\",\r\n      \"postedOrder\": \"1\",\r\n      \"postingDate\": \"2023-01-22\",\r\n      \"valueDate\": \"2022-05-15\",\r\n      \"actionDate\": \"2022-04-24\",\r\n      \"transactionDate\": \"2022-04-21\",\r\n      \"amount\": \"41.99\"\r\n    }\r\n  ]\r\n}"
+      }
+    ]
+  }
